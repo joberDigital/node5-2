@@ -7,6 +7,7 @@ const BIN_ID = process.env.BIN_ID;
 
 router.post('/', async (req, res) => {
   const cardData = req.body;
+
   try {
     const response = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`, {
       method: 'PUT',

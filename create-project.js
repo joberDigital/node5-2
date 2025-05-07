@@ -29,8 +29,9 @@ const files = {
       e.preventDefault();
       const title = e.target.title.value.trim();
       const owner = e.target.owner.value.trim();
-const card = { title, owner };
+      const card =    { title: 'algo', owner: 'alguien' }
       const messageDiv = document.getElementById('response-message');
+    console.log("card"+card)
       try {
         const response = await fetch('/api/cards', {
           method: 'POST',
